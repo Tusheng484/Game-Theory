@@ -1,0 +1,106 @@
+/* Course styles are scoped to the notes whose frontmatter selects them. */
+:is(.gt-home, .gt-guide, .gt-lesson, .gt-concept) {
+  --gt-accent: #126b60;
+  --gt-blue: 57, 96, 152;
+  --gt-green: 18, 107, 96;
+  --gt-purple: 106, 76, 144;
+  --gt-rule: var(--background-modifier-border);
+  --file-line-width: 820px;
+  line-height: 1.65;
+}
+
+.theme-dark :is(.gt-home, .gt-guide, .gt-lesson, .gt-concept) {
+  --gt-accent: #83d3bd;
+  --gt-blue: 131, 175, 236;
+  --gt-green: 131, 211, 189;
+  --gt-purple: 198, 166, 244;
+}
+
+:is(.gt-home, .gt-guide) .inline-title,
+:is(.gt-home, .gt-guide) .metadata-container:not(:has([data-property-key="type"])) {
+  display: none;
+}
+
+.gt-home.markdown-preview-view h1 {
+  border-top: 4px solid var(--gt-accent);
+  margin: 0 0 0.45em;
+  padding-top: 0.45em;
+  color: var(--text-normal);
+  font-size: clamp(2rem, 4.4vw, 3.25rem);
+  letter-spacing: 0.02em;
+}
+
+.gt-home.markdown-preview-view .el-h1 + .el-p > p {
+  color: var(--text-muted);
+}
+
+:is(.gt-home, .gt-guide, .gt-lesson, .gt-concept) h2 {
+  margin-top: 1.6em;
+  border-bottom: 1px solid var(--gt-rule);
+  padding-bottom: 0.32em;
+  line-height: 1.4;
+}
+
+.gt-home .callout[data-callout^="gt-"] {
+  border: 1px solid rgba(var(--callout-color), 0.3);
+  border-inline-start: 4px solid rgb(var(--callout-color));
+  border-radius: 12px;
+  padding: 0.7em 1em;
+  margin-block: 0.75em;
+}
+
+.gt-home .callout-content p {
+  margin-block: 0.4em 0;
+}
+
+:is(.gt-home, .gt-guide, .gt-lesson, .gt-concept) .callout-title a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+:is(.gt-home, .gt-guide, .gt-lesson, .gt-concept) .callout-content > :last-child {
+  margin-bottom: 0;
+}
+
+.gt-home .callout[data-callout="gt-start"],
+.gt-concept .callout[data-callout="gt-intuition"] {
+  --callout-color: var(--gt-green);
+  --callout-icon: lucide-compass;
+}
+
+.gt-home .callout[data-callout="gt-map"] {
+  --callout-color: var(--gt-blue);
+  --callout-icon: lucide-map;
+}
+
+.gt-home .callout[data-callout="gt-index"] {
+  --callout-color: var(--gt-purple);
+  --callout-icon: lucide-search;
+}
+
+.gt-lesson .callout[data-callout="gt-source"] {
+  --callout-color: var(--gt-blue);
+  --callout-icon: lucide-file-text;
+}
+
+.canvas-node .gt-lesson .metadata-container {
+  display: none;
+}
+
+:is(.gt-home, .gt-guide, .gt-concept) table {
+  width: 100%;
+}
+
+:is(.gt-home, .gt-guide, .gt-concept) table thead th {
+  background-color: var(--background-secondary);
+}
+
+.gt-concept mjx-container[display="true"] {
+  overflow-x: auto;
+  padding-block: 0.3em;
+}
+
+.gt-concept .internal-embed img {
+  max-inline-size: 100%;
+}

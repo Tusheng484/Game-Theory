@@ -1,0 +1,20 @@
+# Original handouts remain beside the vault. Version the linked copies inside it.
+/L[0-9]*.pdf
+
+# Local backups, scratch files, and private environment files.
+/work/
+.DS_Store
+Thumbs.db
+desktop.ini
+.env
+.env.*
+*.local
+
+# Obsidian state tied to this machine or containing plugin-specific data.
+**/.obsidian/workspace*.json
+**/.obsidian/plugins/
+**/.obsidian/cache/
+**/.obsidian/sync.json
+**/.obsidian/publish.json
+**/.obsidian/hotkeys.json
+**/.trash/
